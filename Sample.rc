@@ -1,0 +1,1022 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "editcmd.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""editcmd.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Sample.ico"
+IDR_SAMPLETYPE          ICON    DISCARDABLE     "res\\SampleDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_SAMPLETYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Preview",               ID_FILE_PRINT_PREVIEW
+        MENUITEM "Pa&ge Setup...",              ID_FILE_PAGE_SETUP
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "Find Previous\tShift+F3",     ID_EDIT_FIND_PREVIOUS
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Clear All bookmarks",         ID_EDIT_CLEAR_BOOKMARKS
+            MENUITEM SEPARATOR
+            MENUITEM "Bookmark 0",                  ID_EDIT_TOGGLE_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_TOGGLE_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_TOGGLE_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_TOGGLE_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_TOGGLE_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_TOGGLE_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_TOGGLE_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_TOGGLE_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_TOGGLE_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_TOGGLE_BOOKMARK9
+        END
+        POPUP "Goto Bookmark"
+        BEGIN
+            MENUITEM "Bookmark 0",                  ID_EDIT_GO_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_GO_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_GO_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_GO_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_GO_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_GO_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_GO_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_GO_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_GO_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_GO_BOOKMARK9
+        END
+        POPUP "More Bookmarks (VC++)"
+        BEGIN
+            MENUITEM "Toggle Bookmark",             ID_EDIT_TOGGLE_BOOKMARK
+            MENUITEM "Next Bookmark",               ID_EDIT_GOTO_NEXT_BOOKMARK
+
+            MENUITEM "Previous bookmark",           ID_EDIT_GOTO_PREV_BOOKMARK
+
+            MENUITEM "Clear All Bookmarks",         ID_EDIT_CLEAR_ALL_BOOKMARKS
+
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Calculate"
+    BEGIN
+        MENUITEM "&Compute Expression\tF1",     Calculate
+        MENUITEM "Computing Options",           ID_CALCULATE_COMPUTEOPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Apply Numbers\tF11",         ID_CALCULATE_APPLYNUMBERS
+        MENUITEM "&Format Numbers",             ID_CALCULATE_FORMATNUMBERS
+        MENUITEM "Extract Numbers",             ID_CALCULATE_EXTRACTNUMBERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Sum\tF12",                   Sumx
+        MENUITEM "A&verage ",                   ID_CALCULATE_AVERAGE
+        MENUITEM "C&ount Items",                ID_CALCULATE_COUNTITEMS
+        MENUITEM "S&um of Squares",             ID_CALCULATE_SUMOFSQUARES
+        MENUITEM "&Root Mean Squares",          ID_CALCULATE_ROOTMEANSQUARE
+        MENUITEM "Me&dian",                     ID_CALCULATE_MEDIAN
+        MENUITEM "Find mi&n and max values",    ID_CALCULATE_FINDMINANDMAXVALUES
+
+        MENUITEM "&Mean Deviation from Mean",   ID_CALCULATE_MEANDEVIATIONFROMMEAN
+
+        MENUITEM "S&tandard Deviation",         ID_CALCULATE_STANDARDDEVIATION
+
+        MENUITEM "Va&riance",                   ID_CALCULATE_VARIANCE
+        MENUITEM SEPARATOR
+        MENUITEM "PI   3.141592653589793",      ID_CALCULATE_PI3141592654
+    END
+    POPUP "Co&nversion"
+    BEGIN
+        MENUITEM "Decimal to &Hex",             ID_CONVERSION_DECIMALTOHEX
+        MENUITEM "Decimal to &Oct",             ID_CONVERSION_DECIMALTOOCT
+        MENUITEM "Hex to &Decimal",             ID_CONVERSION_HEXTODECIMAL
+        MENUITEM "Hex to O&ct",                 ID_CONVERSION_HEXTOOCT
+        MENUITEM "Oct  to D&ecimal",            ID_CONVERSION_OCTTODECIMAL
+        MENUITEM "Oct to He&x",                 ID_CONVERSION_OCTTOHEX
+        MENUITEM SEPARATOR
+        POPUP "Insert Conversion Tables"
+        BEGIN
+            MENUITEM "Length ",                     ID_CONVERSION_UNITS
+            MENUITEM "Area",                        ID_CONVERSION_TABLES_AREA
+
+            MENUITEM "Volume",                      ID_CONVERSION_TABLES_VOLUME
+
+            MENUITEM "Weight",                      ID_CONVERSION_TABLES_WEIGHT
+
+        END
+    END
+    POPUP "&Text"
+    BEGIN
+        MENUITEM "&Add First Word",             ID_TEXT_ADDFIRSTWORD
+        MENUITEM "Add &Last Word",              ID_TEXT_ADDLASTWORD
+        MENUITEM "&Remove First Word",          ID_TEXT_REMOVEFIRSTWORD
+        MENUITEM "R&emove Last Word",           ID_TEXT_REMOVELASTWORD
+        MENUITEM "&Keep First Word",            ID_TEXT_KEEPFIRSTWORD
+        MENUITEM "Kee&p Last Word",             ID_TEXT_KEEPLASTWORD
+        MENUITEM "Make Into One Line",          ID_TEXT_MAKEINTOONELINE
+        MENUITEM "Line Numbering",              ID_TEXT_NUMBERLINE
+        MENUITEM SEPARATOR
+        MENUITEM "Select Font",                 ID_EDIT_SELECTFONT
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "TextCalc Website",            ID_HELP_TEXTCALCWEBSITE
+        POPUP "Other Products Websites"
+        BEGIN
+            MENUITEM "VRML Editor",                 ID_HELP_RENDERSOFTPRODUCTS_VRMLEDITOR
+
+            MENUITEM "Illusionae",                  ID_HELP_RENDERSOFTPRODUCTS_ILLUSIONAE
+
+            MENUITEM "Atomix Buttons",              ID_HELP_RENDERSOFTPRODUCTS_ATOMIXBUTTONS
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "pop"
+    BEGIN
+        MENUITEM "Compute Expression",          Calculate
+        MENUITEM "Sum",                         Sumx
+        MENUITEM "Apply numbers",               ID_CALCULATE_APPLYNUMBERS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          Calculate,              VIRTKEY, NOINVERT
+    VK_F11,         ID_CALCULATE_APPLYNUMBERS, VIRTKEY, NOINVERT
+    VK_F12,         Sumx,                   VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 234, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Text Calculator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "TextCalc Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999 RnderSoft Software and Web Publishing",
+                    IDC_STATIC,41,29,170,19
+    DEFPUSHBUTTON   "OK",IDOK,195,7,32,14,WS_GROUP
+    LTEXT           "We are very grateful to these individuals. Part of this code is derived from the Crystal Editor by Andrei Stcherbatchenko; Expression Evaluator by Zoly Farkas, and HyperLink by Chris Maunder.",
+                    IDC_STATIC,40,79,180,39
+    LTEXT           "ACKNOWLEDGEMENT",IDC_STATIC,41,66,79,8
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 242, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Apply numbers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,182,22,50,13
+    PUSHBUTTON      "Cancel",IDCANCEL,182,40,50,13
+    EDITTEXT        IDC_EDIT1,96,59,136,13,ES_AUTOHSCROLL
+    LTEXT           "More examples: 2+x     4-x*5      sin(x)/2     sqrt(abs(x))      log10(x)",
+                    IDC_STATIC,11,103,198,9
+    CONTROL         "Multiply by a factor",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,22,76,13
+    CONTROL         "Add a value",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,11,
+                    42,76,11
+    CONTROL         "Expression",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,11,
+                    60,76,13
+    LTEXT           "For example, the expression  2*x  will multiply each number in the selection by a factor of 2. The variable x represent the original number.",
+                    IDC_STATIC,11,80,218,20
+    EDITTEXT        IDC_EDIT2,96,22,55,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,96,40,55,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO2,7,122,228,128,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Operations",IDC_STATIC,7,7,228,109
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 187, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add first word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,122,22,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,122,41,50,14
+    CONTROL         "Insert a space after the word",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,41,97,11
+    CONTROL         "Skip empty lines",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,59,97,11
+    EDITTEXT        IDC_EDIT1,37,22,69,13,ES_AUTOHSCROLL
+    GROUPBOX        "Insert word at the beginning of each line",IDC_STATIC,7,
+                    7,173,71
+    LTEXT           "Word",IDC_STATIC,14,25,20,12
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 187, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add last word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,122,22,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,122,41,50,14
+    CONTROL         "Insert a space before the word",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,41,104,11
+    CONTROL         "Skip empty lines",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,59,97,11
+    EDITTEXT        IDC_EDIT1,37,22,69,13,ES_AUTOHSCROLL
+    GROUPBOX        "Insert word at the end of each line",IDC_STATIC,7,7,173,
+                    71
+    LTEXT           "Word",IDC_STATIC,14,25,20,12
+END
+
+IDD_DIALOG4 DIALOG DISCARDABLE  0, 0, 192, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format numbers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,14,93,39,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,93,39,14
+    EDITTEXT        IDC_EDIT1,54,22,128,13,ES_AUTOHSCROLL
+    GROUPBOX        "Add prefix/suffix to numbers; format decimal digits",
+                    IDC_GROUPBOX1,7,7,178,105
+    CONTROL         "Prefix",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,21,33,14
+    EDITTEXT        IDC_EDIT2,54,45,128,13,ES_AUTOHSCROLL
+    CONTROL         "Suffix",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,44,33,14
+    COMBOBOX        IDC_COMBO1,141,69,41,48,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Number of digits after decimal point",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,69,121,11
+END
+
+IDD_DIALOG5 DIALOG DISCARDABLE  0, 0, 212, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Remove First Word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,24,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,43,46,14
+    GROUPBOX        "Remove the first word of each line using the word separator",
+                    IDC_STATIC,7,2,198,62
+    CONTROL         "white space (space and tab)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,24,129,11
+    CONTROL         "any of the characters",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,43,78,12
+    EDITTEXT        IDC_EDIT1,99,42,43,15,ES_AUTOHSCROLL
+    LTEXT           "If the separators are ,;= (comma, semi-colon and equal), the lines\n\n\tstatus=24   will be trimmed to   24\n\t24,33,44   will be trimmed to   33,44\n\tA bird;A cat   will be trimmed to    A cat",
+                    IDC_STATIC,12,104,184,50
+    LTEXT           "If  white space is included as a separator, the lines\n\n\tHello World!   will be trimmed to   World!\n\tA B C D E   will be trimmed to   B C D E",
+                    IDC_STATIC,11,160,186,34
+    CONTROL         "Remove the separator along with the word",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,72,163,14
+    GROUPBOX        "Example",IDC_STATIC,7,91,198,112
+END
+
+IDD_DIALOG6 DIALOG DISCARDABLE  0, 0, 212, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Remove Last Word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,24,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,43,46,14
+    GROUPBOX        "Remove the last word of each line using the word separator",
+                    IDC_STATIC,7,2,198,62
+    CONTROL         "white space (space and tab)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,24,129,11
+    CONTROL         "any of the characters",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,43,78,12
+    EDITTEXT        IDC_EDIT1,99,42,43,15,ES_AUTOHSCROLL
+    LTEXT           "If the separators are ,;= (comma, semi-colon and equal), the lines\n\n\tstatus=24   will be trimmed to   status\n\t24,33,44   will be trimmed to   24,33\n\tA bird;A cat   will be trimmed to    A bird",
+                    IDC_STATIC,12,104,184,50
+    LTEXT           "If  white space is included as a separator, the lines\n\n\tHello World!   will be trimmed to   Hello\n\tA B C D E   will be trimmed to   A B C D",
+                    IDC_STATIC,11,160,186,34
+    CONTROL         "Remove the separator along with the word",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,72,163,14
+    GROUPBOX        "Example",IDC_STATIC,7,91,198,112
+END
+
+IDD_DIALOG7 DIALOG DISCARDABLE  0, 0, 212, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Keep First Word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,24,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,43,46,14
+    GROUPBOX        "Keep only the first word of each line using the word separator",
+                    IDC_STATIC,7,2,198,62
+    CONTROL         "white space (space and tab)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,24,129,11
+    CONTROL         "any of the characters",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,43,78,12
+    EDITTEXT        IDC_EDIT1,99,42,43,15,ES_AUTOHSCROLL
+    LTEXT           "If the separators are ,;= (comma, semi-colon and equal), the lines\n\n\tstatus=24; flag=TRUE;   will be trimmed to   status\n\t24,33,44   will be trimmed to   24\n\tA bird;A cat;A dog   will be trimmed to    A bird",
+                    IDC_STATIC,12,104,184,50
+    LTEXT           "If  white space is included as a separator, the lines\n\n\tHello Hello World!   will be trimmed to   Hello\n\tA B C D E   will be trimmed to   A",
+                    IDC_STATIC,11,160,186,34
+    CONTROL         "Remove the separator after trimming",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,72,163,14
+    GROUPBOX        "Example",IDC_STATIC,7,91,198,112
+END
+
+IDD_DIALOG8 DIALOG DISCARDABLE  0, 0, 212, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Keep Last Word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,24,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,43,46,14
+    GROUPBOX        "Keep only the last word of each line using the word separator",
+                    IDC_STATIC,7,2,198,62
+    CONTROL         "white space (space and tab)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,24,129,11
+    CONTROL         "any of the characters",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,43,78,12
+    EDITTEXT        IDC_EDIT1,99,42,43,15,ES_AUTOHSCROLL
+    LTEXT           "If the separators are ,;= (comma, semi-colon and equal), the lines\n\n\tstatus=24; flag=TRUE;   will be trimmed to   TRUE\n\t24,33,44   will be trimmed to   44\n\tA bird;A cat;A dog   will be trimmed to    A dog",
+                    IDC_STATIC,12,104,184,50
+    LTEXT           "If  white space is included as a separator, the lines\n\n\tHello Hello World!   will be trimmed to   World!\n\tA B C D E   will be trimmed to   E",
+                    IDC_STATIC,11,160,186,34
+    CONTROL         "Remove the separator after trimming",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,72,163,14
+    GROUPBOX        "Example",IDC_STATIC,7,91,198,112
+END
+
+IDD_DIALOG9 DIALOG DISCARDABLE  0, 0, 212, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Computing Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,99,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,118,46,14
+    GROUPBOX        "Hex/Oct/Decimal Conversion Options ",IDC_STATIC,7,65,
+                    198,78
+    CONTROL         "white space (space and tab)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,99,129,11
+    CONTROL         "any of the characters",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,118,78,12
+    EDITTEXT        IDC_EDIT1,97,117,43,15,ES_AUTOHSCROLL
+    LTEXT           "Treat the following characters as separators",
+                    IDC_STATIC,13,79,182,14
+    CONTROL         "Place results in the next line",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON,12,33,188,12
+    CONTROL         "Place results in the same line as the expression",
+                    IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,12,18,188,12
+    GROUPBOX        "After Calculating a Single-Line Expression",IDC_STATIC,
+                    7,2,198,52
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Sample MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Sample\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Sample.EXE\0"
+            VALUE "ProductName", "Sample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 143
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  32, 32
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      Calculate
+    BUTTON      Sumx
+    BUTTON      ID_CALCULATE_APPLYNUMBERS
+    BUTTON      ID_BUTTON32829
+    BUTTON      Dec
+END
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  25, 24
+BEGIN
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_REPEAT
+    BUTTON      ID_EDIT_FIND_PREVIOUS
+    BUTTON      ID_EDIT_REPLACE
+    SEPARATOR
+    BUTTON      ID_EDIT_TOGGLE_BOOKMARK
+    BUTTON      ID_EDIT_GOTO_NEXT_BOOKMARK
+    BUTTON      ID_EDIT_GOTO_PREV_BOOKMARK
+    BUTTON      ID_EDIT_CLEAR_ALL_BOOKMARKS
+    SEPARATOR
+    BUTTON      Calculate
+    BUTTON      Sumx
+    BUTTON      ID_CALCULATE_APPLYNUMBERS
+    BUTTON      ID_BUTTON32829
+    BUTTON      Dec
+END
+
+IDR_TOOLBAR2 TOOLBAR DISCARDABLE  32, 32
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_REPEAT
+    BUTTON      ID_EDIT_FIND_PREVIOUS
+    BUTTON      ID_EDIT_REPLACE
+    SEPARATOR
+    BUTTON      Calculate
+    BUTTON      Sumx
+    BUTTON      ID_CALCULATE_APPLYNUMBERS
+    BUTTON      ID_BUTTON32883
+    BUTTON      ID_BUTTON32884
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\bmp00001.bmp"
+IDR_TOOLBAR2            BITMAP  DISCARDABLE     "res\\toolbar2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG1 DLGINIT
+BEGIN
+    IDC_COMBO2, 0x403, 35, 0
+0x6552, 0x7573, 0x746c, 0x2073, 0x6977, 0x6c6c, 0x7220, 0x7065, 0x616c, 
+0x6563, 0x6f20, 0x6972, 0x6967, 0x616e, 0x206c, 0x6164, 0x6174, "\000" 
+    IDC_COMBO2, 0x403, 47, 0
+0x6552, 0x7573, 0x746c, 0x2073, 0x6977, 0x6c6c, 0x6220, 0x2065, 0x6e69, 
+0x6573, 0x7472, 0x6465, 0x6e20, 0x7865, 0x2074, 0x6f74, 0x6f20, 0x6972, 
+0x6967, 0x616e, 0x206c, 0x6164, 0x6174, "\000" 
+    0
+END
+
+IDD_DIALOG4 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 2, 0
+0x0030, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0039, 
+    IDC_COMBO1, 0x403, 3, 0
+0x3031, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "TextCalc"
+    IDR_SAMPLETYPE          "\nTextCalc\nTextCalc\nText Files (*.txt)\n.txt\nTextCalc.Document\nTextCalc Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "TextCalc"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the document"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    IDS_OLE_INIT_FAILED     "OLE initialization failed"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nFind Next "
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_FIND_PREVIOUS   "Find the previous occurrence of the specified text\nFind Previous"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_INDICATOR_COL   "========="
+    ID_EDIT_INDICATOR_READ  "Read"
+    ID_EDIT_INDICATOR_CRLF  "========"
+    ID_EDIT_INDICATOR_POSITION "============"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_SELECTFONT      "Select the text font"
+    ID_EDIT_GOTOLINE        "Goto a certain line"
+    Calculate               "Calculate Expression\nCompute Expression"
+    Sumx                    "Sum all numbers (in blue) in selection\nSum"
+    ID_CALCULATE_AVERAGE    "Compute the average of all numbers in blue"
+    ID_CALCULATE_SUMOFSQUARES 
+                            "Compute the squares of the numbers and sum them "
+    ID_CALCULATE_ROOTMEANSQUARE "Compute the root mean squares of the numbers"
+    ID_CALCULATE_COUNTITEMS "Count the number of items in blue"
+    ID_CALCULATE_MEDIAN     "Find the median of the set of numbers"
+    ID_CALCULATE_MEANDEVIATIONFROMMEAN 
+                            "Calculate the average deviation from the mean"
+    ID_CALCULATE_STANDARDDEVIATION 
+                            "Calculate the standard deviation of the set of numbers"
+    ID_CALCULATE_VARIANCE   "Calculate the variance of the set of numbers"
+    ID_CALCULATE_APPLYNUMBERS 
+                            "Apply operation to all numbers (in blue) in selection\nApply Numbers"
+    ID_CALCULATE_FORMATNUMBERS 
+                            "Add prefix, suffix to numbers  or   Format decimal digits"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CALCULATE_FINDMINANDMAXVALUES 
+                            "Find the minimum and maximum values in the selection"
+    ID_TEXT_ADDFIRSTWORD    "Add a word to the beginning of each line in the selection"
+    ID_TEXT_ADDLASTWORD     "Add a word at the end of each line in the selection"
+    ID_TEXT_REMOVEFIRSTWORD "Remove the first  word of each line in the selection"
+    ID_TEXT_REMOVELASTWORD  "Remove the last  word of each line in the selection"
+    ID_TEXT_KEEPFIRSTWORD   "Keep only the first word of each line, trim the rest"
+    ID_TEXT_KEEPLASTWORD    "Keep only the last word of each line, trim the rest"
+    ID_CALCULATE_EXTRACTNUMBERS "Extract all numbers in the selection"
+    ID_TEXT_MAKEINTOONELINE "Make selection into one single line"
+    ID_BUTTON32829          "Convert decimal to hex\nDecimal to Hex Conversion"
+    Dec                     "Convert hex to decimal\nHex to Decimal Conversion"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_TOGGLE_BOOKMARK "Add Bookmarks\nAdd Bookmarks"
+    ID_EDIT_GOTO_NEXT_BOOKMARK "Find Next Bookmarks\nFind Next Bookmarks"
+    ID_EDIT_GOTO_PREV_BOOKMARK 
+                            "Find Previous Bookmarks\nFind Previous Bookmarks"
+    ID_EDIT_CLEAR_ALL_BOOKMARKS "Clear All Bookmarks\nClear All Bookmarks"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_TEXTCALCWEBSITE "Visit the TextCalc Website"
+    ID_HELP_RENDERSOFTPRODUCTS_VRMLEDITOR "Create animated 3D logos"
+    ID_HELP_RENDERSOFTPRODUCTS_ILLUSIONAE "A powerful 3D texture maker"
+    ID_HELP_RENDERSOFTPRODUCTS_ATOMIXBUTTONS 
+                            "Creates animated button applets. Includes an integrated button image maker."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

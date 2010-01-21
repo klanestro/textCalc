@@ -1,0 +1,325 @@
+//[Quick Start]
+A basic concept in TextCalc is to first "select" an expression
+or a block of data and then "apply" an operation to it.
+
+//Computing Expressions
+//---------------------
+For example, to compute an expression, place the cursor 
+on the blue line below and press F1 or click the 
+"Compute Expression" button.
+
+5+3-7+8
+
+To compute multiple expressions at once, select the following 
+block of text and press F1 or the "Compute Expression" button.
+
+72*32
+8*9+43-10
+(3+2)*4/2*sin(3.141592653589793/6) 
+-2*3+4
+4^2
+5+3/2+1
+sqrt(sqr(3)+sqr(4))
+
+To remove the results after evaluation, press CTRL-Z 
+or select Edit:Undo from the menu. For a list of functions 
+and operators supported, please see the section
+"Functions supported" below.
+
+
+//Summing numbers
+//---------------
+To sum the list of numbers below, place the cursor
+of the line and press F12 or click the "Sum" button.
+All numbers (in blue color) on the line will be summed.
+
+3 5 -4 3 21 281 43 43 54 32 54 543  
+
+You can also sum a selection. Select the block of text
+below,  including the non-numeric words in black, and 
+click "Sum".
+
+Salary : $2700.3
+Interest  :  $140.3
+Mantainence : $312.2
+
+
+As you can see, only numbers (colored in blue) will be added. 
+This operation applies not only to "Sum" but also to other
+statistical functions like
+Average, Count Items, Sum of Squares, Root mean squares,
+Median, Find max and min values, Mean Deviation from Mean,
+Standard Deviation and Variance. All these can be accessed
+from the "Calculate" menu.
+
+
+//Applying Numbers
+//----------------
+You can apply an expression to a list of numbers easily.
+To convert the following from kg to pounds, select the block 
+of text below and press F11 or click the "Apply Numbers" button. 
+A dialog will appears. To multiply each of the following
+by 2.2 (1Kg = 2.2 pounds), enter 2.2 into the 
+"Multiply by factor" textbox and press the "OK" button.
+
+Sugar 1.2	Salt 7.3
+Milk  4.2	Honey 8.8
+Flour 3.4	
+
+In the Apply Dialog, apart from "Multiply by factor", you can
+also "Add a value" or "Apply Expression" to each number. 
+
+The "Apply Expression" option is very powerful, you can type any
+expression to evaluate every number in the list. For example,
+to compute the squareroot of each number in the list below,
+place the cursor on the blue line and press F11. Select 
+"Apply Expression", and in the textbox, type sqrt(x) 
+
+(Note: x is the variable that represent the original number 
+in the list you selected.)
+
+and click the "OK" button in the dialog box.
+
+4 9 16 25 36 49 64 81
+
+When applying numbers, you have the option to 
+1)let results replace the original data   or
+2)insert results next to the original data.
+
+
+//Formating Numbers
+//-----------------
+The operation for formatting of numbers is the same as applying
+numbers. For example to add a dollar sign before each number
+below, select the block of text and choose 
+"Calculate:Format Numbers" from the menu. A dialog will appear.
+Enter the $ (dollar sign) in the textbox next to "prefix" and
+click the "OK" button. 
+
+Sugar 1.2	Salt 7.3
+Milk  4.2	Honey 8.8
+Flour 3.4	
+
+When formatting numbers, you can set the "prefix", "suffix"
+and the "number of digits after decimal point" for each number 
+you selected.
+
+
+//Extracting numbers
+//------------------
+The operation for extracting numbers is the same as applying
+numbers. Simply select the data and choose 
+"Calculate:Extract Numbers" from the menu. 
+All numbers (colored in blue) in the selecton will be extracted.
+
+
+//Hex, Dec and Oct Conversions
+//----------------------------
+Hex, Dec and Oct conversions is very similar to applying 
+numbers. As usual, you can select a single line by placing
+the cursor on the line or select a block of text if
+data is more than one line. 
+
+While the "Sum" or "Apply Numbers" operations will 
+automatically seek out the numbers that are colored in blue,
+Hex, Dec and Oct indentify the objects for conversion using
+separators. 
+
+A separator is any character that separates a word. For example
+the space separates 22 33 44 55, while the comma separates 
+88,99,43,23,77. The default separator for conversion
+is whitespace (space, tab  and newline).
+
+For example, to convert the following hex numbers to decimal,
+place the cursor on the line below and click the "DEC" button.
+
+3F 12 1A 323 25 bC ee
+
+To convert from decimal to hex, select the block below
+and click the "HEX" button.
+
+12
+10
+5
+21 34
+77
+88
+
+Other conversions from dec to oct, oct to dec, hex to oct,
+oct to hex (accessible from the "Conversion" menu) 
+uses the same method for conversion. 
+
+If you need to use other separators to separate each number 
+for conversion, you can choose "Calculate:Computing Options"
+from the menu. A dialog will appear. 
+
+Under the "Hex/Dec/Oct Conversion Options", select the
+"any of the characters" checkbox. Enter , (comma) as the 
+separator in the textbox next to "any of the characters".
+Click "OK". From now on, you can convert any line with comma
+as the separator. For an example, test the following line
+by converting it from hex into decimal. Place the cursor 
+on the line below and click the "DEC" button.
+
+3F,12,1A,323,25,bC,ee,C
+
+
+//Text Functions
+//--------------
+Apart from performing calculation, TextCalc also offers some
+useful text utility functions. You can add a word to
+the beginning of every line by using "Add First Word".
+For example, select the block of text below, then choose 
+"Text:Add First Word" from the menu. Click "OK" when a
+dialog appears.
+
+Hello World!
+ABCDEFG HIJKLMNOP
+1 3 5 7 9 11 13
+Good Morning! Good Night!
+
+
+Other text operations include
+"Add Last Word" :  Add a word to the end of each line.
+"Remove First Word" : Remove the first word of each line.
+"Remove Last Word" : Remove the last word of each line.
+"Keep First Word" : Keep only the first word of each line. 
+"Keep Last Word" : Keep only the last word of each line.
+"Make Into One Line" : Make selection into one long single line.
+
+
+
+//TextCalc Advantages
+//-------------------
+TextCalc, being both a Calculator and a Text Editor,
+and has several advantages over conventional calculators.
+
+1)You can put comments besides your answer
+and expressions. 
+2)You can save and reuse your results and expressions. 
+3)You do not need to write your answer down on a paper
+before computing another expression, as you can leave 
+the previous result in the editor.
+4)You can open an existing text data file 
+and perform calculations on it.
+5)You can apply an expression to many numbers at one go.
+For example, 1 2 3 4 5 will be changed to 2 4 6 8 10.
+6)You can sum, average, convert into hex etc. a list of 
+numbers easily.
+
+
+
+//Math Functions supported in TextCalc
+//------------------------------------
+These functions are supported in TextCalc:
+( )   Brackets, indicates high precedence sub-expressions
+^     To the power of
+*     Multiplication
+/     Division
++     Addition
+-     Subtraction
+
+sin   Sine       //e.g sin(3.14159)   arguments are in radians
+cos   Cosine     //e.g cos(3.14159)   arguments are in radians
+tan   Tangent    //e.g tan(3.14159)   arguments are in radians
+sinh  Hyperbolic sine     //e.g sinh(1)
+cosh  Hyperbolic cosine   //e.g cosh(1)
+tanh  Hyperbolic tangent  //e.g tanh(2)
+asin  Arcsine			  //e.g acos(1)	  results is in radians
+acos  Arccosine			  //e.g acos(0.5) results is in radians		
+atan  Arctangent		  //e.g atan(4)	  results is in radians
+ln    Natural logarithm	  //e.g	ln(20)	
+log10 Log to base 10  //e.g log10(1000)		
+sqr   Square          //e.g sqr(5)
+sqrt  Squareroot      //e.g sqrt(64)	
+abs   Absolute value  //e.g abs(-3)
+deg2rad Convert degrees to radians   //e.g deg2rad(30) 
+rad2deg Convert radians to degrees   //e.g rad2deg(3.141592654)
+remainder   find the remainder of    //e.g remainder(17,5)
+div   Perform integer division  //e.g div(17,5)  result is 3
+exp   e (2.71828182846) to the power of  //e.g exp(10)
+root  Compute root //e.g root(8,3) computes the cube root of 8  
+log   Compute logarithm to a base 
+//e.g log(1024,2) computes the logarithm of 1024 to base 2
+fact  Compute factorial //e.g fact(5)
+nPr   Permutation of  //e.g npr(4,2) 
+nCr   Combination of  //e.g ncr(5,3)
+
+
+//Operators precedence:
+//---------------------
+When computing an expression, some operators will be evaluated 
+before others. E.g for
+
+2+3*4
+
+multiplication will precede addition, so 
+
+  2+3*4 
+= 2+12
+= 14
+
+
+The precedence for the operators are:
+-------------------------------------
+( ) brackets						(Highest precedence)
+unary -
+^ power of
+* /    multiplication and division  
++ -    addition and subtraction 	(Lowest precedence)
+
+
+//About The Text Editor
+//---------------------
+The text editor is able to recognize numbers and strings
+enclosed inside double quotes "" . Numbers are colored
+blue, while strings are colored red. Any line with
+double slash infront // will be turned green. 
+Futhermore, any block of text within /*  and */ will
+also be turned green.
+
+
+
+//Bugs and Limitations
+//--------------------
+1)Currently, all spaces inside an expression will be 
+removed/trimmed before evaluation. For example, if 
+you have an expression 23 45 + 1 47 *89 + sqrt(9), 
+then the expression passed to the parser will be 
+2345+147*89+sqrt(9). 
+
+Another example:
+sqr      t(9)+3 00 . 230 will be interpreted as
+sqrt(9)+300.230
+
+2)TextCalc cannot recognize numbers of the form 3.2e2
+
+3)Hex/Dec/Oct conversion is limited to positive integers
+only.
+
+
+
+
+//Acknowledgements
+//----------------
+This product is made possible because it uses code from 
+certain individuals. We are grateful to 
+
+Andrei Stcherbatchenko for his wonderful
+Crystal Edit - syntax coloring text editor!
+
+Zoly Farkas for his powerful
+Expression Evaluator! 
+
+Chris Maunder for his most useful
+HyperLink!
+
+
+
+//-------------------
+//Filename : Help.txt
+//-------------------
+
+
+
+

@@ -1,0 +1,28 @@
+//Volume Conversion Table
+1 cubic inch = 16.387 cubic cm
+1 cubic inch = 0.00433 US gallon
+
+1 cubic foot = 1728 cubic inches
+1 cubic foot = 28317 cubic cm
+1 cubic foot = 28.32 liters
+
+1 cubic yard = 27 cubic feet
+1 cubic yard = 0.7646 cubic meters
+
+1 cubic centimeter = 0.0610 cubic inch
+
+1 cubic meter = 1000000 cubic cm
+1 cubic meter = 61024  cubic inches
+1 cubic meter = 35.315 cubic feet
+1 cubic meter = 1.308 cubic yard
+1 cubic meter = 1000 liters
+1 cubic meter = 264.2 US gallon
+
+1 liter = 61.024 cubic inches
+1 liter = 0.0353 cubic feet
+1 liter = 1000 cubic cm
+1 liter = 0.001 cubic meter
+1 liter = 0.2642 US gallon
+
+1 US gallon = 231 cubic inches
+1 US gallon = 3.785 liter

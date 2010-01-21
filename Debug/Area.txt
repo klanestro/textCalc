@@ -1,0 +1,25 @@
+//Area Conversion Table
+1 square foot =  0.0929 square meters
+1 square foot = 144 square inches
+
+1 acre = 43560 square feet
+1 acre = 4046.85 square meters
+1 acre = 0.4047 hectares
+
+1 square mile = 640 acres
+1 square mile = 259.0 hectares
+1 square mile = 2.58998 square km
+
+1 square km = 0.3861 square miles
+
+1 square inch = 0.006944 square feet
+1 square inch = 6.4516 square cm
+
+1 square cm = 0.1550 square inches
+
+1 square meter = 10.764 square feet
+1 square meter = 0.000247 acres
+1 square meter = 1550 square inches
+
+1 hectare = 2.4711 acres
+1 hectare = 10000 square metres

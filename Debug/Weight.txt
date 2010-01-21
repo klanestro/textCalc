@@ -1,0 +1,19 @@
+//Weight Conversion Table
+1 grain = 0.0648 grams
+
+1 gram = 15.43 grains
+
+1 Avoirdupois ounce = 437.5 grains
+1 Avoirdupois ounce = 0.0625 lbs
+1 Avoirdupois ounce = 28.35 grams
+
+1 pound = 7000 grain
+1 pound = 16 Avoirdupois oz
+1 pound = 453.6 grams
+
+1 metric ton = 1000 kg
+1 metric ton = 2205 lb
+
+1 kilogram = 35.274 Avoirdupois oz
+1 kilogram = 2.205 lb
+1 kilogram = 1000 gram

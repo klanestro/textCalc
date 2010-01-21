@@ -1,0 +1,187 @@
+The package consists of three main classes: 
+
+CCrystalTextBuffer class is responsible for storing lines, loading and saving text to a file. To simplify Undo/Redo command implementations, every editing operation is split into a sequence of 'insert text' and 'delete text' actions. Accordingly, CView-derived classes are only intended to react only on this primitive operations. 
+CCrystalTextView class is the framework for text viewing window. It derives from CView, and it provides text painting code, overridable functions for syntax highlighting, different kinds of text selections, cursor movements, Find common dialog etc. However, it's not allowed to perform any changes to the text. 
+CCrystalTextView-derived views are usually used with CCrystalTextBuffer object. Once such a view is connected to the CCrystalTextBuffer object, it is capable to track changes made to the text. (Obviously, any number of views can be connected to a single CCrystalTextBuffer object at the same time. This is useful, when we need to use the editor in the dynamic splitter as shown on the figure above). 
+CCrystalEditView class is derived from CCrystalTextView class. Unlike its ansector, which is only able to display a text and update the view when it is needed, it has functions to perform all sorts of editing, including drag-and-drop and Replace dialog. Note, that the view does not make the changes in the text directly, instead, it transforms the command into a sequence of primitive operations described above, and delegates them to the CCrystalTextBuffer object. Once the changes are made, the CCrystalTextBuffer object updates all views connected to it. 
+Usually, CCrystalTextBuffer exists within the CDocument object. You must provide a way to connect views to the object (the best place for it is CView::OnInitialUpdate handler). In most cases, you will also need to override SetModified method to keep 'dirty' flag of the document up-to-date. Consider the following sample code: 
+class CSampleDoc : public CDocument
+
+{
+
+// code omitted
+
+
+
+// Attributes
+
+public:
+
+    class CSampleTextBuffer : public CCrystalTextBuffer
+
+    {
+
+    private:
+
+        CSampleDoc *m_pOwnerDoc;
+
+    public:
+
+        CSampleTextBuffer(CSampleDoc *pDoc) { m_pOwnerDoc = pDoc; };
+
+
+
+        virtual void SetModified(BOOL bModified = TRUE)
+
+            { m_pOwnerDoc->SetModifiedFlag(bModified); };
+
+    };
+
+
+
+    CSampleTextBuffer m_xTextBuffer;
+
+};
+CCrystalTextView objects can exist without a buffer class, in that case it must provide its own storage for lines (binded to another storage object, for example) and mechanisms for updating the view when text content changes. Whether are you using CCrystalTextBuffer object or not, you will always need to derive your class from CCrystalTextView. 
+CCrystalTextView cannot exist without CCrystalTextBuffer object. 
+
+Using CCrystalTextView or CCrystalEditView with buffer class
+
+To use CCrystalEditView (or CCrystalTextView) with the CCrystalTextBuffer object, you must go through the following steps: 
+Derive your class from CCrystalEditView (or CCrystalTextView). 
+Override LocateTextBuffer member function. After that, your view class declaration will look like this: 
+class CSampleView : public CCrystalEditView
+
+{
+
+    // code omitted
+
+
+
+protected:
+
+    virtual CCrystalTextBuffer *LocateTextBuffer();
+
+}
+and the implementation will look like this: 
+CCrystalTextBuffer *CSampleView::LocateTextBuffer()
+
+{
+
+    CSampleDoc *pDoc = (CSampleDoc *) GetDocument();
+
+    return &pDoc->m_xTextBuffer;
+
+}
+
+
+That's all! From this point, view and buffer objects will work together. To load text from the file, simply call LoadFromFile method of CCrystalTextBuffer class. To save the text to file, call SaveToFile. Remember, you must call InitNew or LoadFromFile member function before using the object; and FreeAll function before deleting it. 
+
+Parsing and syntax coloring
+
+All parsing is concentrated in a single method of CCrystalTextView class, declared as follows: 
+
+
+virtual DWORD ParseLine(DWORD dwCookie, int nLineIndex,
+
+                        TEXTBLOCK *pBuf, int &nActualItems);
+
+
+
+struct TEXTBLOCK
+
+{
+
+    int  m_nCharPos;      // Offset from beginning of the line
+
+    int  m_nColorIndex;   // Type of the block being defined: COLORINDEX_NORMALTEXT,
+
+                          //  COLORINDEX_KEYWORD, COLORINDEX_COMMENT, etc.
+
+};
+
+
+This method should parse the line specified by its zero-based number (nLineIndex) and split it into the blocks of text. Each block is provided with the character position and its color. 
+For the sake of an efficiency, the internal view implementation preserves the result of parsing each line. dwCookie parameter means the result of parsing the previous line. Really, this is the minimum of the information, needed to restart the parser from the indicated line. For example, when parsing C++ code, you'll have to pass the following set of flags as dwCookie parameter: 
+Extended comment (/* */) flag. This is absolutely needed because C++ has multiple-line comments. 
+Continuous double-slash comment; 
+Continuous preprocessor directive; 
+Continuous string constant; 
+Continuous character constant. 
+To understand why we need last four cases, consider the following C++ code snippet: 
+// This is the continuous double-slash comment.\
+
+    you see, it is really continuous !
+
+#define MESSAGE "And this is continuous preprocessor directive.\n"\
+
+    "And this is its second line."
+This approach can minimize amount of information, that we need to keep within the view object. Actually, we must preserve only the information that must be passed from one line to another. Moreover, to increase parsing speed, sometimes ParseLine member is called with NULL as pBuf parameter. In that case, the function is called only to calculate the cookie, and that can be made much faster. 
+For more information, look in the demo project, which includes parser for the C++ language. 
+
+Using CCrystalTextView without buffer class
+
+In that case, we are using it just as text viewer, and we need to provide the storage for lines. Suppose, we have an array of strings in the CDocument object. The view must take the text from this array. The view class declaration will look like this: 
+protected:
+
+    virtual int GetLineCount();
+
+    virtual int GetLineLength(int nLineIndex);
+
+    virtual LPCTSTR GetLineChars(int nLineIndex);
+
+
+And implementation will look like this: 
+int CSampleView::GetLineCount()
+
+{
+
+    // Please note that we must always return at least 1 line.
+
+    // Even empty text has a single *empty* line!
+
+    CSampleDoc *pDoc = (CSampleDoc *) GetDocument();
+
+    return pDoc->m_strarrLines.GetSize();
+
+}
+
+
+
+int CSampleView::GetLineLength(int nLineIndex)
+
+{
+
+    CSampleDoc *pDoc = (CSampleDoc *) GetDocument();
+
+    return pDoc->m_strarrLines[nLineIndex].GetLength();
+
+}
+
+
+
+LPCTSTR CSampleView::GetLineChars(int nLineIndex)
+
+{
+
+    CSampleDoc *pDoc = (CSampleDoc *) GetDocument();
+
+    return pDoc->m_strarrLines[nLineIndex];
+
+}
+Known drawbacks and limitations
+
+
+Only fixed fonts are supported. 
+No support for bold/italic on syntax elements (Delphi style) 
+No 'word wrap'. (Since the editor was primarily designed as a code editor, is this feature really needed?) 
+No support for column selection. 
+
+If you decide to use this code
+
+You are free to use or modify this code to the following restrictions: 
+You must acknowledge me somewhere in your about box, simple "Parts of code by.." will be enough. If you cannot (or don't want to) mention my name, contact me personally. At least, I'm flexible. 
+Do not remove copyright notices from the source and header files. 
+Do not publish any part of this code or article on other websites. 
+I reserve to myself exclusive right to update this page, as well as provided source code and usage sample. Please publish your modification and additions on adjacent pages. In other words, do not blame me for other's bugs. 
+The demo project includes parsing methods and the keyword set for C/C++ language. It was originally built using MS Developer Studio 5.0 SP3. 
